@@ -1,0 +1,179 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" fill="none">
+  <rect width="800" height="450" fill="#f3f4f6"/>
+  
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="pidGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:0.1" />
+      <stop offset="100%" style="stop-color:#3b82f6;stop-opacity:0.1" />
+    </linearGradient>
+    <pattern id="dotPattern" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#e5e7eb"/>
+    </pattern>
+  </defs>
+  
+  <rect width="800" height="450" fill="url(#pidGradient)"/>
+  <rect width="800" height="450" fill="url(#dotPattern)" opacity="0.5"/>
+  
+  <!-- Main Content -->
+  <g transform="translate(400, 225)">
+    
+    <!-- Left Side - Original P&ID Drawing -->
+    <g transform="translate(-300, 0)">
+      <rect x="-80" y="-100" width="160" height="200" rx="8" fill="white" stroke="#e5e7eb" stroke-width="2"/>
+      
+      <!-- P&ID Title Bar -->
+      <rect x="-80" y="-100" width="160" height="25" rx="8" fill="#f9fafb"/>
+      <text x="0" y="-82" text-anchor="middle" fill="#6b7280" font-family="system-ui" font-size="10" font-weight="600">
+        P&ID-2024-001
+      </text>
+      
+      <!-- Simplified P&ID Elements -->
+      <!-- Vessels -->
+      <circle cx="-40" cy="-30" r="15" fill="none" stroke="#9ca3af" stroke-width="2"/>
+      <text x="-40" y="-25" text-anchor="middle" fill="#9ca3af" font-size="8">V-101</text>
+      
+      <rect x="10" y="-45" width="30" height="30" rx="4" fill="none" stroke="#9ca3af" stroke-width="2"/>
+      <text x="25" y="-25" text-anchor="middle" fill="#9ca3af" font-size="8">T-201</text>
+      
+      <!-- Pumps -->
+      <circle cx="-40" cy="20" r="10" fill="none" stroke="#9ca3af" stroke-width="2"/>
+      <path d="M-50,20 L-30,20 M-40,10 L-40,30" stroke="#9ca3af" stroke-width="2"/>
+      <text x="-40" y="40" text-anchor="middle" fill="#9ca3af" font-size="8">P-301</text>
+      
+      <!-- Valves -->
+      <g transform="translate(25, 20)">
+        <path d="M-5,-5 L5,5 M-5,5 L5,-5" stroke="#9ca3af" stroke-width="2"/>
+        <circle cx="0" cy="0" r="8" fill="none" stroke="#9ca3af" stroke-width="1"/>
+        <text x="0" y="18" text-anchor="middle" fill="#9ca3af" font-size="8">XV-401</text>
+      </g>
+      
+      <!-- Piping Lines -->
+      <path d="M-25,-30 L10,-30" stroke="#9ca3af" stroke-width="2"/>
+      <path d="M40,-30 L60,-30 L60,20 L35,20" stroke="#9ca3af" stroke-width="2"/>
+      <path d="M-30,20 L15,20" stroke="#9ca3af" stroke-width="2"/>
+      <path d="M-40,5 L-40,-15" stroke="#9ca3af" stroke-width="2"/>
+      
+      <!-- Instruments -->
+      <circle cx="-10" cy="0" r="6" fill="white" stroke="#9ca3af" stroke-width="1"/>
+      <text x="-10" y="3" text-anchor="middle" fill="#9ca3af" font-size="6">TI</text>
+      
+      <rect x="45" y="-10" width="12" height="12" fill="white" stroke="#9ca3af" stroke-width="1"/>
+      <text x="51" y="-2" text-anchor="middle" fill="#9ca3af" font-size="6">PI</text>
+      
+      <!-- Paper/Scan Effect -->
+      <rect x="-80" y="-100" width="160" height="200" rx="8" fill="url(#noisePattern)" opacity="0.05"/>
+    </g>
+    
+    <!-- Center - AI Processing Animation -->
+    <g transform="translate(0, 0)">
+      <!-- AI Brain Icon -->
+      <circle cx="0" cy="-20" r="30" fill="#8b5cf6" opacity="0.1" stroke="#8b5cf6" stroke-width="2"/>
+      <g transform="translate(0, -20)">
+        <path d="M-15,-10 Q-10,-15 -5,-10 Q0,-15 5,-10 Q10,-15 15,-10" 
+              stroke="#8b5cf6" stroke-width="2" fill="none"/>
+        <path d="M-15,0 Q-10,-5 -5,0 Q0,-5 5,0 Q10,-5 15,0" 
+              stroke="#8b5cf6" stroke-width="2" fill="none"/>
+        <path d="M-15,10 Q-10,5 -5,10 Q0,5 5,10 Q10,5 15,10" 
+              stroke="#8b5cf6" stroke-width="2" fill="none"/>
+      </g>
+      
+      <!-- Processing Text -->
+      <text x="0" y="25" text-anchor="middle" fill="#8b5cf6" font-family="system-ui" font-size="12" font-weight="600">
+        AI Processing
+      </text>
+      <text x="0" y="40" text-anchor="middle" fill="#6b7280" font-family="system-ui" font-size="10">
+        Computer Vision
+      </text>
+      
+      <!-- Animated Arrows -->
+      <path d="M-100,0 L-50,0" stroke="#8b5cf6" stroke-width="2" stroke-dasharray="5,5" opacity="0.6">
+        <animate attributeName="stroke-dashoffset" values="0;10" dur="1s" repeatCount="indefinite"/>
+      </path>
+      <path d="M50,0 L100,0" stroke="#10b981" stroke-width="2" stroke-dasharray="5,5" opacity="0.6">
+        <animate attributeName="stroke-dashoffset" values="0;10" dur="1s" repeatCount="indefinite"/>
+      </path>
+      
+      <!-- Arrow heads -->
+      <path d="M-55,0 L-50,-5 L-50,5 Z" fill="#8b5cf6" opacity="0.6"/>
+      <path d="M95,0 L100,-5 L100,5 Z" fill="#10b981" opacity="0.6"/>
+    </g>
+    
+    <!-- Right Side - Digital Output -->
+    <g transform="translate(200, -50)">
+      <!-- Digital Dashboard -->
+      <rect x="-50" y="-50" width="200" height="150" rx="8" fill="white" stroke="#10b981" stroke-width="2"/>
+      
+      <!-- Header -->
+      <rect x="-50" y="-50" width="200" height="30" rx="8" fill="#10b981" opacity="0.1"/>
+      <text x="50" y="-30" text-anchor="middle" fill="#10b981" font-family="system-ui" font-size="12" font-weight="600">
+        Digital P&ID
+      </text>
+      
+      <!-- Extracted Data -->
+      <g transform="translate(-30, -5)">
+        <text x="0" y="0" fill="#374151" font-family="system-ui" font-size="10" font-weight="600">Equipment List:</text>
+        <text x="5" y="15" fill="#6b7280" font-family="system-ui" font-size="9">✓ V-101: Vessel</text>
+        <text x="5" y="28" fill="#6b7280" font-family="system-ui" font-size="9">✓ T-201: Tank</text>
+        <text x="5" y="41" fill="#6b7280" font-family="system-ui" font-size="9">✓ P-301: Pump</text>
+        <text x="5" y="54" fill="#6b7280" font-family="system-ui" font-size="9">✓ XV-401: Valve</text>
+      </g>
+      
+      <g transform="translate(80, -5)">
+        <text x="0" y="0" fill="#374151" font-family="system-ui" font-size="10" font-weight="600">Instruments:</text>
+        <text x="5" y="15" fill="#6b7280" font-family="system-ui" font-size="9">• TI: Temperature</text>
+        <text x="5" y="28" fill="#6b7280" font-family="system-ui" font-size="9">• PI: Pressure</text>
+        <text x="5" y="41" fill="#6b7280" font-family="system-ui" font-size="9">• 2 Control Loops</text>
+      </g>
+      
+      <!-- Metrics Badge -->
+      <rect x="60" y="70" width="80" height="25" rx="12" fill="#10b981" opacity="0.1" stroke="#10b981"/>
+      <text x="100" y="86" text-anchor="middle" fill="#10b981" font-family="system-ui" font-size="11" font-weight="600">
+        99% Accurate
+      </text>
+    </g>
+    
+    <!-- Bottom Stats -->
+    <g transform="translate(0, 140)">
+      <rect x="-180" y="0" width="100" height="50" rx="8" fill="#3b82f6" opacity="0.1" stroke="#3b82f6" stroke-width="1"/>
+      <text x="-130" y="20" text-anchor="middle" fill="#3b82f6" font-family="system-ui" font-size="14" font-weight="bold">
+        90%
+      </text>
+      <text x="-130" y="35" text-anchor="middle" fill="#3b82f6" font-family="system-ui" font-size="9">
+        Faster
+      </text>
+      
+      <rect x="-50" y="0" width="100" height="50" rx="8" fill="#8b5cf6" opacity="0.1" stroke="#8b5cf6" stroke-width="1"/>
+      <text x="0" y="20" text-anchor="middle" fill="#8b5cf6" font-family="system-ui" font-size="14" font-weight="bold">
+        5000+
+      </text>
+      <text x="0" y="35" text-anchor="middle" fill="#8b5cf6" font-family="system-ui" font-size="9">
+        Symbols
+      </text>
+      
+      <rect x="80" y="0" width="100" height="50" rx="8" fill="#10b981" opacity="0.1" stroke="#10b981" stroke-width="1"/>
+      <text x="130" y="20" text-anchor="middle" fill="#10b981" font-family="system-ui" font-size="14" font-weight="bold">
+        100%
+      </text>
+      <text x="130" y="35" text-anchor="middle" fill="#10b981" font-family="system-ui" font-size="9">
+        Searchable
+      </text>
+    </g>
+  </g>
+  
+  <!-- Title -->
+  <text x="400" y="40" text-anchor="middle" fill="#1f2937" font-family="system-ui" font-size="24" font-weight="300">
+    P&amp;ID Digitization
+  </text>
+  <text x="400" y="65" text-anchor="middle" fill="#6b7280" font-family="system-ui" font-size="14">
+    Transform Engineering Drawings into Digital Intelligence
+  </text>
+  
+  <!-- Noise Pattern for Paper Effect -->
+  <defs>
+    <filter id="noisePattern">
+      <feTurbulence baseFrequency="0.9" numOctaves="4" result="noise" seed="1"/>
+      <feColorMatrix in="noise" type="saturate" values="0"/>
+    </filter>
+  </defs>
+</svg>

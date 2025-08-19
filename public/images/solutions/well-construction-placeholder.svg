@@ -1,0 +1,155 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" fill="none">
+  <rect width="800" height="450" fill="#f3f4f6"/>
+  
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="drillGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:0.1" />
+      <stop offset="100%" style="stop-color:#10b981;stop-opacity:0.1" />
+    </linearGradient>
+    <pattern id="gridPattern" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#e5e7eb" stroke-width="1"/>
+    </pattern>
+  </defs>
+  
+  <rect width="800" height="450" fill="url(#gridPattern)" opacity="0.5"/>
+  
+  <!-- Main Content Group -->
+  <g transform="translate(400, 225)">
+    
+    <!-- Drilling Rig Tower -->
+    <g transform="translate(-200, -50)">
+      <!-- Tower Structure -->
+      <path d="M-30,-100 L-20,-100 L-15,50 L-35,50 Z" fill="#6b7280" opacity="0.8"/>
+      <path d="M30,-100 L20,-100 L15,50 L35,50 Z" fill="#6b7280" opacity="0.8"/>
+      <path d="M-30,-100 L30,-100" stroke="#6b7280" stroke-width="3"/>
+      <path d="M-28,-80 L28,-80" stroke="#6b7280" stroke-width="2"/>
+      <path d="M-26,-60 L26,-60" stroke="#6b7280" stroke-width="2"/>
+      <path d="M-24,-40 L24,-40" stroke="#6b7280" stroke-width="2"/>
+      <path d="M-22,-20 L22,-20" stroke="#6b7280" stroke-width="2"/>
+      <path d="M-20,0 L20,0" stroke="#6b7280" stroke-width="2"/>
+      <path d="M-18,20 L18,20" stroke="#6b7280" stroke-width="2"/>
+      <path d="M-16,40 L16,40" stroke="#6b7280" stroke-width="2"/>
+      
+      <!-- Drill String -->
+      <rect x="-3" y="-100" width="6" height="150" fill="#3b82f6" opacity="0.9"/>
+      
+      <!-- Platform -->
+      <rect x="-40" y="50" width="80" height="10" fill="#4b5563" rx="2"/>
+    </g>
+    
+    <!-- Underground Layers -->
+    <g transform="translate(-200, 70)">
+      <rect x="-50" y="0" width="100" height="20" fill="#fbbf24" opacity="0.3"/>
+      <rect x="-50" y="20" width="100" height="25" fill="#f59e0b" opacity="0.3"/>
+      <rect x="-50" y="45" width="100" height="30" fill="#d97706" opacity="0.3"/>
+      <rect x="-50" y="75" width="100" height="35" fill="#92400e" opacity="0.3"/>
+      
+      <!-- Well Path -->
+      <path d="M0,0 L0,30 Q0,50 10,60 L20,80 Q25,90 25,110" 
+            stroke="#3b82f6" stroke-width="3" fill="none" stroke-dasharray="5,3"/>
+    </g>
+    
+    <!-- Real-time Data Dashboard -->
+    <g transform="translate(50, -80)">
+      <rect x="0" y="0" width="200" height="140" rx="8" fill="white" stroke="#e5e7eb" stroke-width="2"/>
+      
+      <!-- Header -->
+      <rect x="0" y="0" width="200" height="30" rx="8" fill="#3b82f6" opacity="0.1"/>
+      <text x="100" y="20" text-anchor="middle" fill="#3b82f6" font-family="system-ui" font-size="14" font-weight="600">
+        Real-Time Analytics
+      </text>
+      
+      <!-- Metrics -->
+      <g transform="translate(15, 45)">
+        <text x="0" y="0" fill="#6b7280" font-family="system-ui" font-size="11">ROP: 120 ft/hr</text>
+        <rect x="80" y="-8" width="90" height="10" rx="2" fill="#e5e7eb"/>
+        <rect x="80" y="-8" width="72" height="10" rx="2" fill="#10b981"/>
+      </g>
+      
+      <g transform="translate(15, 65)">
+        <text x="0" y="0" fill="#6b7280" font-family="system-ui" font-size="11">WOB: 25 klbs</text>
+        <rect x="80" y="-8" width="90" height="10" rx="2" fill="#e5e7eb"/>
+        <rect x="80" y="-8" width="54" height="10" rx="2" fill="#3b82f6"/>
+      </g>
+      
+      <g transform="translate(15, 85)">
+        <text x="0" y="0" fill="#6b7280" font-family="system-ui" font-size="11">RPM: 180</text>
+        <rect x="80" y="-8" width="90" height="10" rx="2" fill="#e5e7eb"/>
+        <rect x="80" y="-8" width="63" height="10" rx="2" fill="#8b5cf6"/>
+      </g>
+      
+      <g transform="translate(15, 105)">
+        <text x="0" y="0" fill="#6b7280" font-family="system-ui" font-size="11">NPT: 4%</text>
+        <rect x="80" y="-8" width="90" height="10" rx="2" fill="#e5e7eb"/>
+        <rect x="80" y="-8" width="18" height="10" rx="2" fill="#10b981"/>
+      </g>
+    </g>
+    
+    <!-- AI Optimization Panel -->
+    <g transform="translate(50, 80)">
+      <rect x="0" y="0" width="200" height="100" rx="8" fill="white" stroke="#e5e7eb" stroke-width="2"/>
+      
+      <!-- Header -->
+      <rect x="0" y="0" width="200" height="25" rx="8" fill="#8b5cf6" opacity="0.1"/>
+      <text x="100" y="17" text-anchor="middle" fill="#8b5cf6" font-family="system-ui" font-size="12" font-weight="600">
+        AI Recommendations
+      </text>
+      
+      <!-- Recommendations -->
+      <g transform="translate(10, 35)">
+        <circle cx="5" cy="5" r="3" fill="#10b981"/>
+        <text x="15" y="8" fill="#4b5563" font-family="system-ui" font-size="10">Increase RPM to 200</text>
+      </g>
+      
+      <g transform="translate(10, 50)">
+        <circle cx="5" cy="5" r="3" fill="#f59e0b"/>
+        <text x="15" y="8" fill="#4b5563" font-family="system-ui" font-size="10">Monitor vibration levels</text>
+      </g>
+      
+      <g transform="translate(10, 65)">
+        <circle cx="5" cy="5" r="3" fill="#3b82f6"/>
+        <text x="15" y="8" fill="#4b5563" font-family="system-ui" font-size="10">Optimize mud weight</text>
+      </g>
+      
+      <g transform="translate(10, 80)">
+        <circle cx="5" cy="5" r="3" fill="#10b981"/>
+        <text x="15" y="8" fill="#4b5563" font-family="system-ui" font-size="10">95% faster analysis</text>
+      </g>
+    </g>
+    
+    <!-- Connecting Lines -->
+    <path d="M-150,0 L50,-10" stroke="#3b82f6" stroke-width="2" stroke-dasharray="5,5" opacity="0.3"/>
+    <path d="M-150,50 L50,120" stroke="#8b5cf6" stroke-width="2" stroke-dasharray="5,5" opacity="0.3"/>
+    
+    <!-- Cost Savings Indicator -->
+    <g transform="translate(-320, -100)">
+      <rect x="0" y="0" width="100" height="60" rx="8" fill="#10b981" opacity="0.1" stroke="#10b981" stroke-width="2"/>
+      <text x="50" y="25" text-anchor="middle" fill="#10b981" font-family="system-ui" font-size="18" font-weight="bold">
+        $2-5M
+      </text>
+      <text x="50" y="42" text-anchor="middle" fill="#10b981" font-family="system-ui" font-size="10">
+        Saved per Well
+      </text>
+    </g>
+    
+    <!-- Time Reduction Indicator -->
+    <g transform="translate(-320, -20)">
+      <rect x="0" y="0" width="100" height="60" rx="8" fill="#3b82f6" opacity="0.1" stroke="#3b82f6" stroke-width="2"/>
+      <text x="50" y="25" text-anchor="middle" fill="#3b82f6" font-family="system-ui" font-size="18" font-weight="bold">
+        30%
+      </text>
+      <text x="50" y="42" text-anchor="middle" fill="#3b82f6" font-family="system-ui" font-size="10">
+        Faster Drilling
+      </text>
+    </g>
+  </g>
+  
+  <!-- Title -->
+  <text x="400" y="40" text-anchor="middle" fill="#1f2937" font-family="system-ui" font-size="24" font-weight="300">
+    Well Construction Optimization
+  </text>
+  <text x="400" y="65" text-anchor="middle" fill="#6b7280" font-family="system-ui" font-size="14">
+    AI-Powered Drilling Intelligence
+  </text>
+</svg>

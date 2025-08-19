@@ -1,0 +1,11 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://deepiq.com
+
+# Sitemaps
+Sitemap: https://deepiq.com/sitemap.xml
+Sitemap: https://deepiq.com/sitemap-case-studies.xml
+Sitemap: https://deepiq.com/sitemap-solutions.xml

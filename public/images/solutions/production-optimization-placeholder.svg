@@ -1,0 +1,227 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" fill="none">
+  <rect width="800" height="450" fill="#f3f4f6"/>
+  
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="prodGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:0.1" />
+      <stop offset="50%" style="stop-color:#8b5cf6;stop-opacity:0.1" />
+      <stop offset="100%" style="stop-color:#10b981;stop-opacity:0.1" />
+    </linearGradient>
+    <pattern id="dotGrid" x="0" y="0" width="25" height="25" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#d1d5db" opacity="0.5"/>
+    </pattern>
+  </defs>
+  
+  <rect width="800" height="450" fill="url(#prodGradient)"/>
+  <rect width="800" height="450" fill="url(#dotGrid)"/>
+  
+  <!-- Main Content -->
+  <g transform="translate(400, 225)">
+    
+    <!-- Production Process Flow -->
+    <g transform="translate(-280, -20)">
+      <!-- Input -->
+      <rect x="-30" y="-20" width="60" height="40" rx="4" fill="white" stroke="#6b7280" stroke-width="2"/>
+      <text x="0" y="5" text-anchor="middle" fill="#6b7280" font-family="system-ui" font-size="10" font-weight="600">
+        Raw Input
+      </text>
+      
+      <!-- Process Unit 1 -->
+      <g transform="translate(80, 0)">
+        <rect x="-25" y="-25" width="50" height="50" rx="8" fill="white" stroke="#3b82f6" stroke-width="2"/>
+        <circle cx="0" cy="0" r="15" fill="#3b82f6" opacity="0.2"/>
+        <text x="0" y="4" text-anchor="middle" fill="#3b82f6" font-family="system-ui" font-size="9" font-weight="600">
+          Unit 1
+        </text>
+        <!-- Optimization Indicator -->
+        <circle cx="18" cy="-18" r="6" fill="#10b981" stroke="white" stroke-width="2"/>
+        <path d="M15,-18 L17,-16 L21,-20" stroke="white" stroke-width="2" fill="none"/>
+      </g>
+      
+      <!-- Process Unit 2 -->
+      <g transform="translate(160, 0)">
+        <rect x="-25" y="-25" width="50" height="50" rx="8" fill="white" stroke="#8b5cf6" stroke-width="2"/>
+        <circle cx="0" cy="0" r="15" fill="#8b5cf6" opacity="0.2"/>
+        <text x="0" y="4" text-anchor="middle" fill="#8b5cf6" font-family="system-ui" font-size="9" font-weight="600">
+          Unit 2
+        </text>
+        <!-- Optimization Indicator -->
+        <circle cx="18" cy="-18" r="6" fill="#10b981" stroke="white" stroke-width="2"/>
+        <path d="M15,-18 L17,-16 L21,-20" stroke="white" stroke-width="2" fill="none"/>
+      </g>
+      
+      <!-- Output -->
+      <g transform="translate(240, 0)">
+        <rect x="-30" y="-20" width="60" height="40" rx="4" fill="white" stroke="#10b981" stroke-width="2"/>
+        <text x="0" y="5" text-anchor="middle" fill="#10b981" font-family="system-ui" font-size="10" font-weight="600">
+          Product
+        </text>
+      </g>
+      
+      <!-- Flow Arrows -->
+      <path d="M30,0 L55,0" stroke="#6b7280" stroke-width="2" marker-end="url(#arrowhead)"/>
+      <path d="M105,0 L135,0" stroke="#6b7280" stroke-width="2" marker-end="url(#arrowhead)"/>
+      <path d="M185,0 L210,0" stroke="#6b7280" stroke-width="2" marker-end="url(#arrowhead)"/>
+      
+      <!-- Arrow marker definition -->
+      <defs>
+        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+          <polygon points="0 0, 10 3.5, 0 7" fill="#6b7280"/>
+        </marker>
+      </defs>
+    </g>
+    
+    <!-- AI Optimization Engine -->
+    <g transform="translate(100, -80)">
+      <rect x="-80" y="-40" width="160" height="80" rx="8" fill="white" stroke="#8b5cf6" stroke-width="2"/>
+      
+      <!-- Header -->
+      <rect x="-80" y="-40" width="160" height="25" rx="8" fill="#8b5cf6" opacity="0.1"/>
+      <text x="0" y="-23" text-anchor="middle" fill="#8b5cf6" font-family="system-ui" font-size="11" font-weight="600">
+        AI Optimization Engine
+      </text>
+      
+      <!-- Optimization Variables -->
+      <g transform="translate(-60, -5)">
+        <text x="0" y="0" fill="#374151" font-family="system-ui" font-size="9">Variables: 1,000+</text>
+        <text x="0" y="15" fill="#374151" font-family="system-ui" font-size="9">Constraints: 500+</text>
+        <text x="0" y="30" fill="#374151" font-family="system-ui" font-size="9">Cycle: &lt;1 sec</text>
+      </g>
+      
+      <!-- Optimization Status -->
+      <g transform="translate(35, 10)">
+        <circle cx="0" cy="0" r="15" fill="#10b981" opacity="0.2"/>
+        <text x="0" y="4" text-anchor="middle" fill="#10b981" font-family="system-ui" font-size="10" font-weight="600">
+          LIVE
+        </text>
+      </g>
+    </g>
+    
+    <!-- Real-time Metrics Dashboard -->
+    <g transform="translate(100, 40)">
+      <rect x="-80" y="-30" width="160" height="100" rx="8" fill="white" stroke="#10b981" stroke-width="2"/>
+      
+      <!-- Header -->
+      <rect x="-80" y="-30" width="160" height="20" rx="8" fill="#10b981" opacity="0.1"/>
+      <text x="0" y="-15" text-anchor="middle" fill="#10b981" font-family="system-ui" font-size="10" font-weight="600">
+        Performance Metrics
+      </text>
+      
+      <!-- Metrics with trend arrows -->
+      <g transform="translate(-65, 5)">
+        <text x="0" y="0" fill="#6b7280" font-family="system-ui" font-size="9">Production:</text>
+        <text x="80" y="0" fill="#10b981" font-family="system-ui" font-size="9" font-weight="600">+15%</text>
+        <path d="M110,-2 L115,2 M115,2 L115,-4" stroke="#10b981" stroke-width="2"/>
+      </g>
+      
+      <g transform="translate(-65, 20)">
+        <text x="0" y="0" fill="#6b7280" font-family="system-ui" font-size="9">Energy:</text>
+        <text x="80" y="0" fill="#3b82f6" font-family="system-ui" font-size="9" font-weight="600">-20%</text>
+        <path d="M110,2 L115,-2 M115,-2 L115,4" stroke="#3b82f6" stroke-width="2"/>
+      </g>
+      
+      <g transform="translate(-65, 35)">
+        <text x="0" y="0" fill="#6b7280" font-family="system-ui" font-size="9">Quality:</text>
+        <text x="80" y="0" fill="#8b5cf6" font-family="system-ui" font-size="9" font-weight="600">+30%</text>
+        <path d="M110,-2 L115,2 M115,2 L115,-4" stroke="#8b5cf6" stroke-width="2"/>
+      </g>
+      
+      <g transform="translate(-65, 50)">
+        <text x="0" y="0" fill="#6b7280" font-family="system-ui" font-size="9">OEE:</text>
+        <text x="80" y="0" fill="#f59e0b" font-family="system-ui" font-size="9" font-weight="600">92%</text>
+      </g>
+    </g>
+    
+    <!-- Control Loop Visualization -->
+    <g transform="translate(-100, -50)">
+      <!-- Feedback Loop -->
+      <path d="M-60,30 Q-100,30 -100,0 Q-100,-30 -60,-30" 
+            stroke="#8b5cf6" stroke-width="2" fill="none" stroke-dasharray="5,5" opacity="0.5"/>
+      <path d="M-65,-30 L-60,-35 L-60,-25 Z" fill="#8b5cf6" opacity="0.5"/>
+      
+      <text x="-120" y="0" text-anchor="middle" fill="#8b5cf6" font-family="system-ui" font-size="9" transform="rotate(-90 -120 0)">
+        Feedback
+      </text>
+    </g>
+    
+    <!-- Data Sources -->
+    <g transform="translate(-280, 80)">
+      <rect x="-35" y="-15" width="70" height="30" rx="4" fill="white" stroke="#6b7280" stroke-width="1"/>
+      <text x="0" y="5" text-anchor="middle" fill="#6b7280" font-family="system-ui" font-size="9">
+        DCS/SCADA
+      </text>
+    </g>
+    
+    <g transform="translate(-180, 80)">
+      <rect x="-35" y="-15" width="70" height="30" rx="4" fill="white" stroke="#6b7280" stroke-width="1"/>
+      <text x="0" y="5" text-anchor="middle" fill="#6b7280" font-family="system-ui" font-size="9">
+        Historian
+      </text>
+    </g>
+    
+    <g transform="translate(-80, 80)">
+      <rect x="-35" y="-15" width="70" height="30" rx="4" fill="white" stroke="#6b7280" stroke-width="1"/>
+      <text x="0" y="5" text-anchor="middle" fill="#6b7280" font-family="system-ui" font-size="9">
+        MES/ERP
+      </text>
+    </g>
+    
+    <!-- Connecting Lines to AI Engine -->
+    <path d="M-280,65 L-280,50 Q-280,40 -270,40 L100,40 Q110,40 110,-30" 
+          stroke="#6b7280" stroke-width="1" stroke-dasharray="3,3" opacity="0.5"/>
+    <path d="M-180,65 L-180,45 Q-180,35 -170,35 L90,35 Q100,35 100,-30" 
+          stroke="#6b7280" stroke-width="1" stroke-dasharray="3,3" opacity="0.5"/>
+    <path d="M-80,65 L-80,30 Q-80,20 -70,20 L80,20 Q90,20 90,-30" 
+          stroke="#6b7280" stroke-width="1" stroke-dasharray="3,3" opacity="0.5"/>
+    
+    <!-- Bottom KPI Cards -->
+    <g transform="translate(-180, 140)">
+      <rect x="-50" y="0" width="100" height="45" rx="6" fill="#3b82f6" opacity="0.1" stroke="#3b82f6" stroke-width="1"/>
+      <text x="0" y="18" text-anchor="middle" fill="#3b82f6" font-family="system-ui" font-size="13" font-weight="bold">
+        $5-15M
+      </text>
+      <text x="0" y="32" text-anchor="middle" fill="#3b82f6" font-family="system-ui" font-size="8">
+        Annual Savings
+      </text>
+    </g>
+    
+    <g transform="translate(-60, 140)">
+      <rect x="-50" y="0" width="100" height="45" rx="6" fill="#10b981" opacity="0.1" stroke="#10b981" stroke-width="1"/>
+      <text x="0" y="18" text-anchor="middle" fill="#10b981" font-family="system-ui" font-size="13" font-weight="bold">
+        3-6 Mo
+      </text>
+      <text x="0" y="32" text-anchor="middle" fill="#10b981" font-family="system-ui" font-size="8">
+        Payback
+      </text>
+    </g>
+    
+    <g transform="translate(60, 140)">
+      <rect x="-50" y="0" width="100" height="45" rx="6" fill="#8b5cf6" opacity="0.1" stroke="#8b5cf6" stroke-width="1"/>
+      <text x="0" y="18" text-anchor="middle" fill="#8b5cf6" font-family="system-ui" font-size="13" font-weight="bold">
+        Real-time
+      </text>
+      <text x="0" y="32" text-anchor="middle" fill="#8b5cf6" font-family="system-ui" font-size="8">
+        Optimization
+      </text>
+    </g>
+    
+    <g transform="translate(180, 140)">
+      <rect x="-50" y="0" width="100" height="45" rx="6" fill="#f59e0b" opacity="0.1" stroke="#f59e0b" stroke-width="1"/>
+      <text x="0" y="18" text-anchor="middle" fill="#f59e0b" font-family="system-ui" font-size="13" font-weight="bold">
+        No-Code
+      </text>
+      <text x="0" y="32" text-anchor="middle" fill="#f59e0b" font-family="system-ui" font-size="8">
+        Platform
+      </text>
+    </g>
+  </g>
+  
+  <!-- Title -->
+  <text x="400" y="40" text-anchor="middle" fill="#1f2937" font-family="system-ui" font-size="24" font-weight="300">
+    Production Optimization
+  </text>
+  <text x="400" y="65" text-anchor="middle" fill="#6b7280" font-family="system-ui" font-size="14">
+    Real-Time AI for Maximum Efficiency
+  </text>
+</svg>
