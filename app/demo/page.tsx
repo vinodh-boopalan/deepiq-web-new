@@ -45,14 +45,14 @@ export default function DemoPage() {
   return (
     <>
       <Header />
-      <main className="min-h-screen bg-white">
-        <section className="bg-gradient-to-b from-deepiq-light to-white py-16">
+      <main className="min-h-screen bg-white dark:bg-gray-900 transition-colors">
+        <section className="bg-gradient-to-b from-deepiq-light to-white dark:from-gray-800 dark:to-gray-900 py-16 transition-colors">
           <div className="container">
             <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-4xl md:text-5xl font-thin text-deepiq-dark mb-6">
+              <h1 className="text-4xl md:text-5xl font-thin text-deepiq-dark dark:text-white mb-6 transition-colors">
                 See DeepIQ in Action
               </h1>
-              <p className="text-xl text-deepiq-gray">
+              <p className="text-xl text-deepiq-gray dark:text-gray-300 transition-colors">
                 Get a personalized demonstration of how DeepIQ can transform your operations. 
                 Our experts will show you solutions tailored to your specific challenges.
               </p>
@@ -66,12 +66,12 @@ export default function DemoPage() {
               <div className="grid lg:grid-cols-3 gap-12">
                 <div className="lg:col-span-2">
                   {submitSuccess ? (
-                    <div className="bg-green-50 border border-green-200 rounded-lg p-8 text-center">
+                    <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg p-8 text-center transition-colors">
                       <svg className="w-16 h-16 text-green-500 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                       </svg>
-                      <h2 className="text-2xl font-thin text-green-800 mb-2">Demo Request Received!</h2>
-                      <p className="text-green-700">
+                      <h2 className="text-2xl font-thin text-green-800 dark:text-green-300 mb-2 transition-colors">Demo Request Received!</h2>
+                      <p className="text-green-700 dark:text-green-400 transition-colors">
                         Thank you for your interest in DeepIQ. Our team will contact you within 24 hours 
                         to schedule your personalized demonstration.
                       </p>
@@ -217,7 +217,7 @@ export default function DemoPage() {
                                 onChange={() => handleInterestChange(interest)}
                                 className="mr-3"
                               />
-                              <span className="text-sm text-deepiq-gray">{interest}</span>
+                              <span className="text-sm text-deepiq-gray dark:text-gray-300 transition-colors">{interest}</span>
                             </label>
                           ))}
                         </div>
@@ -279,8 +279,8 @@ export default function DemoPage() {
                 </div>
 
                 <div className="lg:col-span-1">
-                  <div className="bg-deepiq-light rounded-lg p-6 mb-6">
-                    <h3 className="text-xl font-light text-deepiq-dark mb-4">
+                  <div className="bg-deepiq-light dark:bg-gray-800 rounded-lg p-6 mb-6 transition-colors">
+                    <h3 className="text-xl font-light text-deepiq-dark dark:text-white mb-4 transition-colors">
                       What to Expect
                     </h3>
                     <ul className="space-y-3">
@@ -288,7 +288,7 @@ export default function DemoPage() {
                         <svg className="w-5 h-5 text-green-500 mt-0.5 mr-3" fill="currentColor" viewBox="0 0 20 20">
                           <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                         </svg>
-                        <span className="text-sm text-deepiq-gray">
+                        <span className="text-sm text-deepiq-gray dark:text-gray-300 transition-colors">
                           30-minute personalized demonstration
                         </span>
                       </li>
@@ -296,7 +296,7 @@ export default function DemoPage() {
                         <svg className="w-5 h-5 text-green-500 mt-0.5 mr-3" fill="currentColor" viewBox="0 0 20 20">
                           <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                         </svg>
-                        <span className="text-sm text-deepiq-gray">
+                        <span className="text-sm text-deepiq-gray dark:text-gray-300 transition-colors">
                           Solutions tailored to your industry
                         </span>
                       </li>
@@ -304,7 +304,7 @@ export default function DemoPage() {
                         <svg className="w-5 h-5 text-green-500 mt-0.5 mr-3" fill="currentColor" viewBox="0 0 20 20">
                           <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                         </svg>
-                        <span className="text-sm text-deepiq-gray">
+                        <span className="text-sm text-deepiq-gray dark:text-gray-300 transition-colors">
                           ROI analysis and implementation roadmap
                         </span>
                       </li>
@@ -312,29 +312,29 @@ export default function DemoPage() {
                         <svg className="w-5 h-5 text-green-500 mt-0.5 mr-3" fill="currentColor" viewBox="0 0 20 20">
                           <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                         </svg>
-                        <span className="text-sm text-deepiq-gray">
+                        <span className="text-sm text-deepiq-gray dark:text-gray-300 transition-colors">
                           Q&A with our technical experts
                         </span>
                       </li>
                     </ul>
                   </div>
 
-                  <div className="bg-white border border-gray-200 rounded-lg p-6 mb-6">
-                    <h3 className="text-lg font-light text-deepiq-dark mb-3">
+                  <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-6 mb-6 transition-colors">
+                    <h3 className="text-lg font-light text-deepiq-dark dark:text-white mb-3 transition-colors">
                       Why Choose DeepIQ?
                     </h3>
                     <div className="space-y-4">
                       <div>
                         <div className="text-2xl font-thin text-deepiq-blue">30%</div>
-                        <p className="text-sm text-deepiq-gray">Average reduction in downtime</p>
+                        <p className="text-sm text-deepiq-gray dark:text-gray-300 transition-colors">Average reduction in downtime</p>
                       </div>
                       <div>
                         <div className="text-2xl font-thin text-deepiq-blue">60 min</div>
-                        <p className="text-sm text-deepiq-gray">Deployment time per site</p>
+                        <p className="text-sm text-deepiq-gray dark:text-gray-300 transition-colors">Deployment time per site</p>
                       </div>
                       <div>
                         <div className="text-2xl font-thin text-deepiq-blue">10x</div>
-                        <p className="text-sm text-deepiq-gray">Faster data processing</p>
+                        <p className="text-sm text-deepiq-gray dark:text-gray-300 transition-colors">Faster data processing</p>
                       </div>
                     </div>
                   </div>
