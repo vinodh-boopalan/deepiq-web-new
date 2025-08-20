@@ -83,14 +83,14 @@ export default function ContactPage() {
   return (
     <>
       <Header />
-      <main className="min-h-screen bg-white">
-        <section className="bg-gradient-to-b from-deepiq-light to-white py-16">
+      <main className="min-h-screen bg-white dark:bg-gray-900 transition-colors">
+        <section className="bg-gradient-to-b from-deepiq-light to-white dark:from-gray-800 dark:to-gray-900 py-16 transition-colors">
           <div className="container">
             <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-4xl md:text-5xl font-thin text-deepiq-dark mb-6">
+              <h1 className="text-4xl md:text-5xl font-thin text-deepiq-dark dark:text-white mb-6 transition-colors">
                 Let's Transform Your Operations Together
               </h1>
-              <p className="text-xl text-deepiq-gray">
+              <p className="text-xl text-deepiq-gray dark:text-gray-300 transition-colors">
                 Ready to see how DeepIQ can help you achieve operational excellence? 
                 Get in touch with our team of experts.
               </p>
@@ -104,8 +104,8 @@ export default function ContactPage() {
               <div className="grid lg:grid-cols-3 gap-12">
                 <div className="lg:col-span-2">
                   {submitSuccess && (
-                    <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg">
-                      <p className="text-green-800 font-light">
+                    <div className="mb-6 p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg transition-colors">
+                      <p className="text-green-800 dark:text-green-300 font-light transition-colors">
                         Thank you for contacting us! We'll get back to you within 24 hours.
                       </p>
                     </div>
@@ -182,7 +182,7 @@ export default function ContactPage() {
                           name="phone"
                           value={formData.phone}
                           onChange={handleChange}
-                          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-deepiq-blue"
+                          className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:border-deepiq-blue bg-white dark:bg-gray-800 text-gray-900 dark:text-white transition-colors"
                         />
                       </div>
                     </div>
@@ -217,7 +217,7 @@ export default function ContactPage() {
                           name="jobTitle"
                           value={formData.jobTitle}
                           onChange={handleChange}
-                          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-deepiq-blue"
+                          className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:border-deepiq-blue bg-white dark:bg-gray-800 text-gray-900 dark:text-white transition-colors"
                         />
                       </div>
                     </div>
@@ -231,7 +231,7 @@ export default function ContactPage() {
                         name="country"
                         value={formData.country}
                         onChange={handleChange}
-                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-deepiq-blue"
+                        className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:border-deepiq-blue bg-white dark:bg-gray-800 text-gray-900 dark:text-white transition-colors"
                       >
                         <option value="">Select a country</option>
                         <option value="US">United States</option>
@@ -275,7 +275,7 @@ export default function ContactPage() {
                           onChange={handleChange}
                           className="mt-1 mr-3"
                         />
-                        <span className="text-sm text-deepiq-gray">
+                        <span className="text-sm text-deepiq-gray dark:text-gray-300 transition-colors">
                           I agree to the processing of my personal data according to DeepIQ's privacy policy. 
                           DeepIQ may contact me with relevant information about products and services. *
                         </span>
@@ -300,15 +300,15 @@ export default function ContactPage() {
                 </div>
 
                 <div className="lg:col-span-1">
-                  <div className="bg-deepiq-light rounded-lg p-6 mb-6">
-                    <h3 className="text-xl font-light text-deepiq-dark mb-4">Get in Touch</h3>
+                  <div className="bg-deepiq-light dark:bg-gray-800 rounded-lg p-6 mb-6 transition-colors">
+                    <h3 className="text-xl font-light text-deepiq-dark dark:text-white mb-4 transition-colors">Get in Touch</h3>
                     <div className="space-y-4">
                       <div className="flex items-start">
                         <svg className="w-5 h-5 text-deepiq-blue mt-1 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                         </svg>
                         <div>
-                          <p className="font-light text-deepiq-dark">Email</p>
+                          <p className="font-light text-deepiq-dark dark:text-gray-200 transition-colors">Email</p>
                           <a href="mailto:info@deepiq.com" className="text-deepiq-blue hover:underline">
                             info@deepiq.com
                           </a>
@@ -320,7 +320,7 @@ export default function ContactPage() {
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                         </svg>
                         <div>
-                          <p className="font-light text-deepiq-dark">Phone</p>
+                          <p className="font-light text-deepiq-dark dark:text-gray-200 transition-colors">Phone</p>
                           <a href="tel:+1-555-0123" className="text-deepiq-blue hover:underline">
                             +1 (555) 0123
                           </a>
@@ -333,8 +333,8 @@ export default function ContactPage() {
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                         </svg>
                         <div>
-                          <p className="font-light text-deepiq-dark">Headquarters</p>
-                          <p className="text-deepiq-gray">
+                          <p className="font-light text-deepiq-dark dark:text-gray-200 transition-colors">Headquarters</p>
+                          <p className="text-deepiq-gray dark:text-gray-400 transition-colors">
                             Houston, TX<br />
                             United States
                           </p>
