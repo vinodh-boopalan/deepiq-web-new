@@ -19,7 +19,7 @@ interface ConnectorRowProps {
 
 function ConnectorRow({ connectors, direction = 'left', speed = 30 }: ConnectorRowProps) {
   const scrollRef = useRef<HTMLDivElement>(null)
-  const animationRef = useRef<number>()
+  const animationRef = useRef<number | undefined>(undefined)
   const isPausedRef = useRef(false)
   const [hoveredConnector, setHoveredConnector] = useState<string | null>(null)
   const [tooltipPosition, setTooltipPosition] = useState({ x: 0, y: 0 })
