@@ -87,7 +87,7 @@ export default function Hero() {
           {/* Slideshow Section */}
           <div className="relative h-[400px] lg:h-[500px] animate-fade-in">
             {/* Main Slideshow Container */}
-            <div className="relative h-full rounded-2xl overflow-hidden shadow-2xl">
+            <div className="relative h-full rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-br from-gray-900 to-gray-800">
               {/* Image Container */}
               <div className="relative h-full">
                 {slides.map((slide, index) => (
@@ -101,8 +101,9 @@ export default function Hero() {
                       src={slide.image}
                       alt={slide.title}
                       fill
-                      className="object-cover"
+                      className="object-contain"
                       priority={index === 0}
+                      sizes="(max-width: 768px) 100vw, 50vw"
                     />
                     {/* Gradient Overlay */}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
