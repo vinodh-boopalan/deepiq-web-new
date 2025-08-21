@@ -1,0 +1,51 @@
+[
+    {
+      "company": "BHP",
+      "quote": "BHP is very impressed with the geological outcome that was based on the best analytics available.",
+      "name": "Stephen Busuttil",
+      "title": "Manager Data, BHP",
+      "logo_url": "https://cdn.brandfetch.io/bhp.com/logo?c=1idbbZjpKWqOp_-kDsZ"
+    },
+    {
+      "company": "PGeo / Structural Geology",
+      "quote": "DeepIQ has powerful capabilities for processing sophisticated 3D geospatial data using Fuzzy inference networks and deep learning models. DeepIQ's distributed computational framework allowed us to execute sophisticated prediction workflows on large 3D geospatial volumes in a matter of minutes",
+      "name": "Antoine Caté PhD",
+      "title": "PGeo, Senior Consultant (Structural Geology)",
+      "logo_url": null
+    },
+    {
+      "company": "Valaris",
+      "quote": "DeepIQ was just what we needed to successfully meet the scope and schedule requirements of our integration.",
+      "name": "Jimmy Holmes",
+      "title": "Director Data Management & BI",
+      "logo_url": "https://cdn.brandfetch.io/valaris.com/logo?c=1idbbZjpKWqOp_-kDsZ"
+    },
+    {
+      "company": "Schlumberger",
+      "quote": "To date, Schlumberger has utilized DeepIQ to build multiple O&G data transformation pipelines. We have found DeepIQ to be a powerful IT-OT tool that simplifies the development process, saving time and facilitating closer collaboration with non-technical personnel.",
+      "name": "Benoit Foubert",
+      "title": "VP technology Digital Operations Solutions at Schlumberger",
+      "logo_url": "https://cdn.brandfetch.io/slb.com/logo?c=1idbbZjpKWqOp_-kDsZ"
+    },
+    {
+      "company": "Unknown",
+      "quote": "DeepIQ's new generative AI features will revolutionize offset well analysis and greatly improve accuracy, while reducing time taken by at least 95%",
+      "name": "Antony Martin",
+      "title": "Directional Drilling SME",
+      "logo_url": null
+    },
+    {
+      "company": "Unknown",
+      "quote": "The implementation of DeepIQ's DataStudio has significantly improved our data management capabilities, allowing us to integrate and analyze vast amounts of data more efficiently. This has streamlined our operations and empowered our team to make more informed, timely decisions that align with our sustainability goals and regulatory requirements.",
+      "name": "Kevin Monk",
+      "title": "Vice President of Agriculture Information",
+      "logo_url": null
+    },
+    {
+      "company": "Grapevine Energy Holdings",
+      "quote": "DeepIQ DataStudio has enabled real-time integration between our IT and OT systems, cutting our time to insights from days to minutes. It is a key enabler for how we operate and make decisions.",
+      "name": "Cole Norton",
+      "title": "Senior VP of IT, Grapevine Energy Holdings",
+      "logo_url": null
+    }
+  ]  

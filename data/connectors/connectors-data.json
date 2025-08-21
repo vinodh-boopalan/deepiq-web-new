@@ -1,0 +1,128 @@
+{
+  "row1": [
+    {
+      "name": "OSIsoft PI",
+      "domain": "osisoft.com",
+      "description": "Enables ingestion of time-series data from the PI System for analytics and workflows in DeepIQ."
+    },
+    {
+      "name": "Wonderware",
+      "domain": "wonderware.com",
+      "description": "Connects to Wonderware Historian to extract and analyze industrial process data in DeepIQ."
+    },
+    {
+      "name": "Honeywell",
+      "domain": "honeywell.com",
+      "description": "Integrates with Honeywell PHD and OT systems for secure, scalable plant historian data ingestion."
+    },
+    {
+      "name": "Siemens",
+      "domain": "siemens.com",
+      "description": "Connects to Siemens OT and drive systems for automated industrial data ingestion into DeepIQ workflows."
+    },
+    {
+      "name": "ABB",
+      "domain": "abb.com",
+      "description": "Connects to ABB industrial data sources for process optimization and analytics in DeepIQ."
+    },
+    {
+      "name": "Rockwell",
+      "domain": "rockwellautomation.com",
+      "description": "Integrates with Rockwell FactoryTalk and PLCs for contextualized industrial data automation in DeepIQ."
+    },
+    {
+      "name": "AWS",
+      "domain": "aws.amazon.com",
+      "description": "Native integration with AWS services for cloud-scale storage, big data computation, and industrial OT analytics."
+    },
+    {
+      "name": "Azure",
+      "domain": "azure.microsoft.com",
+      "description": "Native integration with Azure for storage, streaming, and analytics on industrial and IIoT data."
+    }
+  ],
+  "row2": [
+    {
+      "name": "PostgreSQL",
+      "domain": "postgresql.org",
+      "description": "Connectors enable bi-directional ETL between PostgreSQL databases and DeepIQ for structured analytics."
+    },
+    {
+      "name": "MongoDB",
+      "domain": "mongodb.com",
+      "description": "Enables ingestion and storage of semi-structured IIoT data via MongoDB connectors in DeepIQ."
+    },
+    {
+      "name": "Oracle",
+      "domain": "oracle.com",
+      "description": "Supports extraction of operational and enterprise data from Oracle databases for DataOps workflows."
+    },
+    {
+      "name": "SQL Server",
+      "domain": "microsoft.com",
+      "description": "Extracts and ingests business/process data from SQL Server for contextualization in DeepIQ."
+    },
+    {
+      "name": "InfluxDB",
+      "domain": "influxdata.com",
+      "description": "Ingests high-frequency industrial time-series data from InfluxDB in DeepIQ for analytics applications."
+    },
+    {
+      "name": "TimescaleDB",
+      "domain": "timescale.com",
+      "description": "Handles time-series data workloads, querying and ingesting into DeepIQ for scalable industrial analytics."
+    },
+    {
+      "name": "Databricks",
+      "domain": "databricks.com",
+      "description": "Direct orchestration and integration with Databricks clusters in DeepIQ for ML and big data workflows."
+    },
+    {
+      "name": "Snowflake",
+      "domain": "snowflake.com",
+      "description": "Batch and streaming data ingestion into Snowflake for scalable, cloud-native industrial analytics in DeepIQ."
+    }
+  ],
+  "row3": [
+    {
+      "name": "Apache Kafka",
+      "domain": "kafka.apache.org",
+      "description": "Ingests and streams operational data using Kafka for real-time analytics in DeepIQ."
+    },
+    {
+      "name": "Elasticsearch",
+      "domain": "elastic.co",
+      "description": "Facilitates high-performance indexing and search over OT/IT data in DeepIQ."
+    },
+    {
+      "name": "SAP",
+      "domain": "sap.com",
+      "description": "Extracts enterprise data from SAP systems for contextualization and analytics in DeepIQ."
+    },
+    {
+      "name": "ServiceNow",
+      "domain": "servicenow.com",
+      "description": "Bidirectional integration for OT/IT operations data and workflow automation in DeepIQ."
+    },
+    {
+      "name": "Salesforce",
+      "domain": "salesforce.com",
+      "description": "Integrates Salesforce business/asset data for advanced analytics and reporting in DeepIQ."
+    },
+    {
+      "name": "Google Cloud",
+      "domain": "cloud.google.com",
+      "description": "Connects to Google BigQuery, Pub/Sub, and storage for cloud-scale analytics and ML in DeepIQ."
+    },
+    {
+      "name": "ThingWorx",
+      "domain": "ptc.com",
+      "description": "Integrates with ThingWorx IoT platform for device data orchestration in DeepIQ workflows."
+    },
+    {
+      "name": "Grafana",
+      "domain": "grafana.com",
+      "description": "Enables industrial data visualization in DeepIQ through advanced Grafana dashboards."
+    }
+  ]
+}

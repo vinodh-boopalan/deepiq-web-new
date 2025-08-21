@@ -14,6 +14,7 @@ export const metadata: Metadata = {
   title: 'DeepIQ - Moving Industrial Data. Powering Intelligent Operations.',
   description: 'From refineries to manufacturing floors, DeepIQ accelerates insight by moving, engineering, and contextualizing data at scale — enabling smarter decisions, safer operations, and better outcomes.',
   keywords: 'industrial AI, oil and gas, intelligent operations, data analytics, predictive maintenance',
+  referrer: 'strict-origin-when-cross-origin',
   openGraph: {
     title: 'DeepIQ - Industrial AI Solutions',
     description: 'Powering intelligent operations in oil & gas industry',
