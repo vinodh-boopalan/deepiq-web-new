@@ -1,8 +1,51 @@
+'use client'
+
+import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { CheckCircle, Cpu, Building, BarChart3, Zap } from 'lucide-react'
+import { CheckCircle, ChevronLeft, ChevronRight } from 'lucide-react'
+
+const slides = [
+  {
+    image: '/images/home/buld-highs.jpg',
+    title: 'Industrial Excellence',
+    description: 'Transforming operations with real-time data insights'
+  },
+  {
+    image: '/images/home/ingests.jpg',
+    title: 'Data at Scale',
+    description: 'Processing billions of data points daily'
+  },
+  {
+    image: '/images/home/usenaturls.jpg',
+    title: 'Intelligent Operations',
+    description: 'AI-powered optimization for industrial facilities'
+  }
+]
 
 export default function Hero() {
+  const [currentSlide, setCurrentSlide] = useState(0)
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length)
+    }, 5000) // Auto-advance every 5 seconds
+
+    return () => clearInterval(timer)
+  }, [])
+
+  const goToSlide = (index: number) => {
+    setCurrentSlide(index)
+  }
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % slides.length)
+  }
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)
+  }
+
   return (
     <section className="relative bg-gradient-to-b from-deepiq-light dark:from-gray-900 to-white dark:to-gray-950 overflow-hidden transition-colors">
       <div className="container section-padding">
@@ -41,32 +84,79 @@ export default function Hero() {
             </div>
           </div>
 
+          {/* Slideshow Section */}
           <div className="relative h-[400px] lg:h-[500px] animate-fade-in">
-            <div className="absolute inset-0 bg-gradient-to-r from-deepiq-blue/10 to-transparent rounded-2xl"></div>
-            <div className="relative h-full flex items-center justify-center">
-              <div className="grid grid-cols-2 gap-4 p-8">
-                <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg dark:shadow-gray-900 p-6 transform hover:scale-105 transition-all">
-                  <Cpu className="w-12 h-12 text-deepiq-blue mb-3" />
-                  <h3 className="font-light text-deepiq-dark dark:text-white">Oil Rig</h3>
-                  <p className="text-sm text-deepiq-gray dark:text-gray-400 mt-1">Offshore platforms</p>
-                </div>
-                <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg dark:shadow-gray-900 p-6 transform hover:scale-105 transition-all">
-                  <Building className="w-12 h-12 text-deepiq-blue mb-3" />
-                  <h3 className="font-light text-deepiq-dark dark:text-white">Refineries</h3>
-                  <p className="text-sm text-deepiq-gray dark:text-gray-400 mt-1">Processing facilities</p>
-                </div>
-                <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg dark:shadow-gray-900 p-6 transform hover:scale-105 transition-all">
-                  <BarChart3 className="w-12 h-12 text-deepiq-blue mb-3" />
-                  <h3 className="font-light text-deepiq-dark dark:text-white">Manufacturing</h3>
-                  <p className="text-sm text-deepiq-gray dark:text-gray-400 mt-1">Production floors</p>
-                </div>
-                <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg dark:shadow-gray-900 p-6 transform hover:scale-105 transition-all">
-                  <Zap className="w-12 h-12 text-deepiq-blue mb-3" />
-                  <h3 className="font-light text-deepiq-dark dark:text-white">Energy</h3>
-                  <p className="text-sm text-deepiq-gray dark:text-gray-400 mt-1">Power generation</p>
-                </div>
+            {/* Main Slideshow Container */}
+            <div className="relative h-full rounded-2xl overflow-hidden shadow-2xl">
+              {/* Image Container */}
+              <div className="relative h-full">
+                {slides.map((slide, index) => (
+                  <div
+                    key={index}
+                    className={`absolute inset-0 transition-opacity duration-1000 ${
+                      index === currentSlide ? 'opacity-100' : 'opacity-0'
+                    }`}
+                  >
+                    <Image
+                      src={slide.image}
+                      alt={slide.title}
+                      fill
+                      className="object-cover"
+                      priority={index === 0}
+                    />
+                    {/* Gradient Overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+                    
+                    {/* Slide Content */}
+                    <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8 text-white">
+                      <h3 className="text-2xl md:text-3xl font-thin mb-2">
+                        {slide.title}
+                      </h3>
+                      <p className="text-sm md:text-base text-gray-200">
+                        {slide.description}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Navigation Arrows - Hidden on mobile, visible on desktop */}
+              <button
+                onClick={prevSlide}
+                className="hidden md:flex absolute left-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-full p-2 transition-colors"
+                aria-label="Previous slide"
+              >
+                <ChevronLeft className="w-6 h-6 text-white" />
+              </button>
+              <button
+                onClick={nextSlide}
+                className="hidden md:flex absolute right-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-full p-2 transition-colors"
+                aria-label="Next slide"
+              >
+                <ChevronRight className="w-6 h-6 text-white" />
+              </button>
+
+              {/* Slide Indicators */}
+              <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+                {slides.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => goToSlide(index)}
+                    className={`w-2 h-2 rounded-full transition-all ${
+                      index === currentSlide 
+                        ? 'bg-white w-8' 
+                        : 'bg-white/50 hover:bg-white/75'
+                    }`}
+                    aria-label={`Go to slide ${index + 1}`}
+                  />
+                ))}
               </div>
             </div>
+
+            {/* Mobile Touch Instructions - Only visible on mobile */}
+            <p className="md:hidden text-center text-xs text-gray-500 dark:text-gray-400 mt-2">
+              Swipe or wait for auto-advance
+            </p>
           </div>
         </div>
       </div>
